@@ -21,20 +21,27 @@ export class ItemListComponent implements OnInit {
     try {
       let items = this.itemsdataService.getAll();
       this.items = this.isNullOrUndefined(await items) ? [] : await items;
-      this.sort(this.items);
+      this.sortArr(this.items);
     } catch (err) {
       console.error(err);
     }
   }
 
-  sort(items:Item[]){
+  sortArr(items:Item[]){
     if(!this.isNullOrUndefined(items)){
+      items=items.sort(function(a, b){ 
+        if (a.name > b.name) { 
+        return 1; 
+        } if (a.name < b.name) { 
+        return -1; 
+        } 
+        });
+
       let itemsTrue =[];
       let itemsFalse =[];
       items.forEach(item=>{
         item.status?(itemsTrue.push(item)):(itemsFalse.push(item));
       })
-      
       this.items=[...itemsFalse,...itemsTrue];
     }
   }
