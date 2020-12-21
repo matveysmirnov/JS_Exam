@@ -9,26 +9,14 @@
     {
       "name": "123",
       "amount": "3",
-      "status": true,
+      "status": false,
       "id": 2
     },
     {
       "name": "gfdg",
       "amount": 1,
-      "status": false,
-      "id": 3
-    },
-    {
-      "name": "kjhgf",
-      "amount": 1,
       "status": true,
-      "id": 4
-    },
-    {
-      "name": "ааа",
-      "amount": 1,
-      "status": false,
-      "id": 5
+      "id": 3
     },
     {
       "name": "абб",
@@ -39,18 +27,18 @@
     {
       "name": "ббб",
       "amount": 1,
-      "status": false,
+      "status": true,
       "id": 7
     },
     {
       "name": "ааб",
       "amount": 1,
-      "status": false,
+      "status": true,
       "id": 8
     },
     {
       "name": "aqqq",
-      "amount": 1,
+      "amount": "1",
       "status": false,
       "id": 9
     }

@@ -29,7 +29,7 @@ export class ItemEditComponent implements OnInit {
   ngOnInit(): void {
     this.itemForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
-      amount: new FormControl(null, [Validators.required]),
+      amount: new FormControl(null, [Validators.required,Validators.pattern(/^\d+$/)]),
       status: new FormControl(null, [Validators.required]),
     });
     this.getData();

@@ -35,10 +35,10 @@
       <button  class="btn btn-primary mr-4" [disabled]="itemForm.invalid" (click)="onSave()">
         Сохранить
       </button>
-      <button class="btn btn-danger mr-4" *ngIf="id != null" (click)="onDelete()" [routerLink]="'/items1'"
+      <button class="btn btn-danger mr-4" *ngIf="id != null" (click)="onDelete()" [routerLink]="'/items'"
       [routerLinkActive]="'active'">Удалить</button>
       <button  class="btn btn-success"  
-      [routerLink]="'/items1'"
+      [routerLink]="'/items'"
       [routerLinkActive]="'active'">
         Обратно
       </button>
