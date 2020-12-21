@@ -14,11 +14,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of items">
-          <td scope="row">{{ item.id }}</td>
+        <tr *ngFor="let item of items" [ngClass]='{"bg-success":item.status}'>
+          <td  scope="row">{{ item.id }}</td>
           <td>{{ item.name }}</td>
           <td>{{ item.amount }}</td>
-          <td>{{ item.status }}</td>
+          <td>
+                <button class="btn btn-light" (click)="onEditStatus(item.id)">
+                    {{ item.status }}
+                </button>
+            </td>
           <td class="text-right">
             <button class="btn btn-primary" (click)="onLinkProfile(item.id)">
               Редактировать

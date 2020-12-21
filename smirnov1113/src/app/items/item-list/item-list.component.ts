@@ -30,6 +30,20 @@ export class ItemListComponent implements OnInit {
     this.router.navigate([this.router.url, 'profile', id]);
   }
 
+  
+  async onEditStatus(id: number) {
+    if (!this.isNullOrUndefined(id)) {
+      try {
+        let item:Item = await this.itemsdataService.getOneById(id);
+        item.status=!item.status;
+        await this.itemsdataService.putOneById(id, item);
+      } catch (err) {
+        console.error(err);
+      }
+      this.getData();
+    } 
+  }
+
   onAddProfile() {
     this.router.navigate([this.router.url, 'profile']);
   }
