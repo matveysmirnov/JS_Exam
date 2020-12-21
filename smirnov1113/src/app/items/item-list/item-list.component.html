@@ -20,7 +20,7 @@
           <td>{{ item.amount }}</td>
           <td>
                 <button class="btn btn-light" (click)="onEditStatus(item.id)">
-                    {{ item.status }}
+                    {{ item.status?"куплено":"не куплено" }}
                 </button>
             </td>
           <td class="text-right">

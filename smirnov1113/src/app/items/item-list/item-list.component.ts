@@ -21,8 +21,21 @@ export class ItemListComponent implements OnInit {
     try {
       let items = this.itemsdataService.getAll();
       this.items = this.isNullOrUndefined(await items) ? [] : await items;
+      this.sort(this.items);
     } catch (err) {
       console.error(err);
+    }
+  }
+
+  sort(items:Item[]){
+    if(!this.isNullOrUndefined(items)){
+      let itemsTrue =[];
+      let itemsFalse =[];
+      items.forEach(item=>{
+        item.status?(itemsTrue.push(item)):(itemsFalse.push(item));
+      })
+      
+      this.items=[...itemsFalse,...itemsTrue];
     }
   }
 
