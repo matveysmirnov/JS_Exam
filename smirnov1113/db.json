@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "name": "json-server",
+      "amount": 3,
+      "status": false,
+      "id": 1
+    },
+    {
+      "name": "123",
+      "amount": "3",
+      "status": true,
+      "id": 2
+    }
+  ]
+}
